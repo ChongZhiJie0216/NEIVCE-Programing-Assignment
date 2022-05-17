@@ -17,7 +17,7 @@ public class Question02 {
         int score=0;
         int CorrectAns=0;
         int WrongAns=0;
-        String operator=null;
+        String operator="";
 
         System.out.println("Welcome to Mathematics Games");
         System.out.print("Please Enter Question Quantity:");
