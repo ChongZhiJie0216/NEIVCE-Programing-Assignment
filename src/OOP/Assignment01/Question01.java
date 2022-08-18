@@ -3,7 +3,7 @@ package OOP.Assignment01;
 import java.util.Scanner;
 
 public class Question01 {
-    static double balance=1500;3
+    static double balance=1500;
     double setWithdraw=0;
     double setDeposit=0;
     double setTransfer=0;
