@@ -3,36 +3,35 @@ package OOP.Assignment01;
 import java.util.Scanner;
 
 public class Question01 {
-    static double balance=1500;
+    static double balance=0;
     double setWithdraw=0;
     double setDeposit=0;
     double setTransfer=0;
     public void setDeposit(double deposit){
         setDeposit = balance + deposit;
         balance=setDeposit;
-        return;
     }
     public void setWithdraw(double withdraw){
         setWithdraw = balance - withdraw;
         balance=setWithdraw;
-        return;
     }
     public void setTransfer(double transfer){
-        if (transfer >= balance){
+        if (transfer <= balance){
+            setTransfer=balance-transfer;
+            balance=setTransfer;
+            System.out.println("Transfer Success");
+            System.out.println("Your Current Balance balance is :" + balance);
+        }else{
             System.out.println("Failed to transfer");
             System.out.println("Sorry Your Balance is not enough for above Transaction");
-        }else{
-            System.out.println("Your Current Balance balance is :" + balance);
-            setTransfer =balance -transfer;
-            balance=setTransfer;
         }
-        return;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Question01 account = new Question01();
         int selection = 0;
+        Question01.balance=1500;
         while(true) {
             System.out.println(" ");
             System.out.println("*Firefox Banking ATM System*");
