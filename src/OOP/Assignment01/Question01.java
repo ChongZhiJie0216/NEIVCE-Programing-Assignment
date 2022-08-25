@@ -14,10 +14,18 @@ public class Question01 {
         setDeposit = balance + deposit;
         balance=setDeposit;
     }
+    public double getSetDeposit() {
+        return setDeposit;
+    }
+
     public void setWithdraw(double withdraw){
         setWithdraw = balance - withdraw;
         balance=setWithdraw;
     }
+    public double getSetWithdraw() {
+        return setWithdraw;
+    }
+
     public void setTransfer(double transfer){
         if (transfer <= balance){
             setTransfer=balance-transfer;
