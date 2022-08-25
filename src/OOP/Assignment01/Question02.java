@@ -1,5 +1,6 @@
 package OOP.Assignment01;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Question02 {
@@ -13,21 +14,24 @@ public class Question02 {
     public void setName(String name) {
         this.name = name;
     }
-
+    void Menu(){
+        System.out.println(" ");
+        System.out.println("Select one option");
+        System.out.println("1.Add student");
+        System.out.println("2.Delete Student");
+        System.out.println("3.Display all Students");
+        System.out.println("0.Exit");
+        System.out.print("Option(0-3):");
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Question02> names= new ArrayList<>();
+        Question02 menu=new Question02(null);
         int option=0;
         System.out.println("Enter Subject Name:");
         String subject =sc.next();
         while(true){
-            System.out.println(" ");
-            System.out.println("Select one option");
-            System.out.println("1.Add student");
-            System.out.println("2.Delete Student");
-            System.out.println("3.Display all Students");
-            System.out.println("0.Exit");
-            System.out.print("Option(0-3):");
+            menu.Menu();
             option = sc.nextInt();
             if (option==1){
                 System.out.println("Add Student Name:");

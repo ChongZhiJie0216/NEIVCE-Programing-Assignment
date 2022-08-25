@@ -7,6 +7,9 @@ public class Question01 {
     double setWithdraw=0;
     double setDeposit=0;
     double setTransfer=0;
+    public Question01(){
+        balance=1500;
+    }
     public void setDeposit(double deposit){
         setDeposit = balance + deposit;
         balance=setDeposit;
@@ -26,22 +29,25 @@ public class Question01 {
             System.out.println("Sorry Your Balance is not enough for above Transaction");
         }
     }
-
+    public void Menu(){
+        System.out.println(" ");
+        System.out.println("*Firefox Banking ATM System*");
+        System.out.println("****************************");
+        System.out.println("** 1. Deposit Money        **");
+        System.out.println("** 2. Withdraw Money       **");
+        System.out.println("** 3. Transfer Money       **");
+        System.out.println("** 4. Balance Inquiry      **");
+        System.out.println("** 5. End Session          **");
+        System.out.println("Please Enter your Selection(1-5):");
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Question01 account = new Question01();
+        Question01 menu =  new Question01();
         int selection = 0;
-        Question01.balance=1500;
+        //Question01.balance=1500;
         while(true) {
-            System.out.println(" ");
-            System.out.println("*Firefox Banking ATM System*");
-            System.out.println("****************************");
-            System.out.println("** 1. Deposit Money        **");
-            System.out.println("** 2. Withdraw Money       **");
-            System.out.println("** 3. Transfer Money       **");
-            System.out.println("** 4. Balance Inquiry      **");
-            System.out.println("** 5. End Session          **");
-            System.out.println("Please Enter your Selection(1-5):");
+            menu.Menu();
             selection = sc.nextInt();
             if (selection == 1) {
                 System.out.println("Your Current Saving balance is :" + balance);
@@ -54,8 +60,13 @@ public class Question01 {
                 System.out.println("Your Current Saving balance is :" + balance);
                 System.out.println("How Mich Money would you like to withdraw?:");
                 double withdraw = sc.nextDouble();
+                if(withdraw >=balance){
+                    System.out.println("Sorry your balance not Enough ");
+                    break;
+                }
                 account.setWithdraw(withdraw);
                 System.out.println("Your Savings Balance is now :RM" + account.setWithdraw);
+
             }
             if (selection == 3) {
                 System.out.println("Your Current Saving balance is :" + balance);
