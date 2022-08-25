@@ -1,4 +1,4 @@
-package OOP.Assignment01;
+package OOP.Assignment01.Question01;
 
 import java.util.Scanner;
 
@@ -14,10 +14,17 @@ public class Question01 {
         setDeposit = balance + deposit;
         balance=setDeposit;
     }
+    public double getSetDeposit() {
+        return setDeposit;
+    }
     public void setWithdraw(double withdraw){
         setWithdraw = balance - withdraw;
         balance=setWithdraw;
     }
+    public double getSetWithdraw() {
+        return setWithdraw;
+    }
+
     public void setTransfer(double transfer){
         if (transfer <= balance){
             setTransfer=balance-transfer;
@@ -29,25 +36,14 @@ public class Question01 {
             System.out.println("Sorry Your Balance is not enough for above Transaction");
         }
     }
-    public void Menu(){
-        System.out.println(" ");
-        System.out.println("*Firefox Banking ATM System*");
-        System.out.println("****************************");
-        System.out.println("** 1. Deposit Money        **");
-        System.out.println("** 2. Withdraw Money       **");
-        System.out.println("** 3. Transfer Money       **");
-        System.out.println("** 4. Balance Inquiry      **");
-        System.out.println("** 5. End Session          **");
-        System.out.println("Please Enter your Selection(1-5):");
-    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Question01 account = new Question01();
-        Question01 menu =  new Question01();
+        Menu menu =  new Menu();
         int selection = 0;
-        //Question01.balance=1500;
         while(true) {
-            menu.Menu();
+            menu.Menus();
             selection = sc.nextInt();
             if (selection == 1) {
                 System.out.println("Your Current Saving balance is :" + balance);
@@ -62,7 +58,13 @@ public class Question01 {
                 double withdraw = sc.nextDouble();
                 if(withdraw >=balance){
                     System.out.println("Sorry your balance not Enough ");
-                    break;
+                    System.out.println("Please Deposit your Balance");
+                    System.out.println("****************************");
+                    System.out.println("Press 0 to Exit ");
+                    int press =sc.nextInt();
+                    if(press ==0){
+                        break;
+                    }
                 }
                 account.setWithdraw(withdraw);
                 System.out.println("Your Savings Balance is now :RM" + account.setWithdraw);
@@ -81,7 +83,7 @@ public class Question01 {
                     System.out.println("Your Current Balance balance is :" + balance);
                 }
             }if (selection ==5 ){
-            break;
+                break;
             }
         }
     }
