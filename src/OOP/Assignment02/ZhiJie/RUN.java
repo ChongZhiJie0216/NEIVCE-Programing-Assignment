@@ -4,13 +4,12 @@ import java.util.Scanner;
 
 public class RUN extends SystemRunning{
     public static void main(String[] args) {
-        MenusCars menus =  new MenusCars();
         SystemRunning system = new SystemRunning();
         Scanner sc = new Scanner(System.in);
         int selection = 0;
         int exit = 0;
         while (true) {
-            menus.MenuCars();
+            system.Menu();
             System.out.print("Please Enter Option (0-5):");
             selection = sc.nextInt();
             if(selection >=5) {
