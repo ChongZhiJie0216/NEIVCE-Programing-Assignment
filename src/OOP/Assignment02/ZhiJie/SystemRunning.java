@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SystemRunning extends Vehicle {
-    String Plate = "";
-    String Color = "";
     int exit = 0;
     int t = 0;
     int w = 0;
@@ -70,7 +68,7 @@ public class SystemRunning extends Vehicle {
                     System.out.print("\nThe Number of Wheel is :" + Parking.get(i).getWheel());
                     //Time Calculator System
                     totaltimes = (System.currentTimeMillis() - Parking.get(i).getTimes()) / 1000;
-                    totalprice = (totaltimes * 0.60);
+                    totalprice = (totaltimes * 0.50);
                     System.out.println("\nYour Parking Times is :" + totaltimes);
                     System.out.printf("\nYour Parking Fees is RM:%.2f", totalprice);
                     Parking.remove(i);
@@ -87,7 +85,7 @@ public class SystemRunning extends Vehicle {
                     System.out.print("\nThe Number of Wheel is :" + Parking.get(i).getWheel());
                     //Time Calculator System
                     totaltimes = (System.currentTimeMillis() - Parking.get(i).getTimes()) / 1000;
-                    totalprice = (totaltimes * 0.30);
+                    totalprice = (totaltimes * 0.25);
                     System.out.println("\nYour Parking Times is :" + totaltimes);
                     System.out.printf("\nYour Parking Fees is RM:%.2f", totalprice);
                     Parking.remove(i);
