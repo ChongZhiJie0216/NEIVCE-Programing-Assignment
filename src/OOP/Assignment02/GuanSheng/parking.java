@@ -84,5 +84,9 @@ public class parking {
                 System.out.print("Pls Enter u number again between(1-5):");
                 setselection(miku.nextInt());
             }else {
-                break;}}}}
+                break;
+            }
+        }
+    }
+}
 

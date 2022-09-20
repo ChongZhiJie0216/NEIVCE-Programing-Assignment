@@ -11,10 +11,11 @@ public class RUN extends SystemRunning{
         int exit = 0;
         while (true) {
             menus.MenuCars();
-            System.out.println("");
-            System.out.print("Enter Option:");
+            System.out.print("Please Enter Option (0-5):");
             selection = sc.nextInt();
-            if (selection == 1) {
+            if(selection >=5) {
+                System.out.print("!!! Please Enter Under 5 Selection !!!");
+            } else if (selection == 1) {
                 system.CarEnter();
             } else if (selection == 2) {
                 system.MotorbikeEnter();
@@ -28,5 +29,6 @@ public class RUN extends SystemRunning{
                 system.exit();
             }
         }
+        }
     }
-}
+
