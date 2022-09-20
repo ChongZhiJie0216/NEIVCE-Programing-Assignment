@@ -12,7 +12,7 @@ public class RUN extends SystemRunning{
             system.Menu();
             System.out.print("Please Enter Option (0-5):");
             selection = sc.nextInt();
-            if(selection >=5) {
+            if(selection >=6) {
                 System.out.print("!!! Please Enter Under 5 Selection !!!");
             } else if (selection == 1) {
                 system.CarEnter();
@@ -28,6 +28,6 @@ public class RUN extends SystemRunning{
                 system.exit();
             }
         }
-        }
     }
+}
 
