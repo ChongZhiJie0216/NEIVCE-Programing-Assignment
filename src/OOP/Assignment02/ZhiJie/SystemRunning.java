@@ -16,8 +16,8 @@ public class SystemRunning extends Vehicle {
     Scanner sc = new Scanner(System.in);
     ArrayList<Vehicle> Parking = new ArrayList<Vehicle>();
 
-    void CarEnter() {
-        Car car = new Car();
+    void CarEnter() {//Car进入
+        Car car = new Car();//呼叫Car里面的内容
         System.out.print("Enter Car Plate:");
         car.setModel(sc.nextLine());
         System.out.print("Enter Car Color:");
@@ -60,7 +60,7 @@ public class SystemRunning extends Vehicle {
                 totaltimes=(System.currentTimeMillis()-Parking.get(i).getTimes())/1000;
                 totalprice = (totaltimes * 0.60);
                 System.out.println("\nYour Parking Times is :"+totaltimes);
-                System.out.printf("\nYour Parking Fees is :%.2f",totalprice);
+                System.out.printf("\nYour Parking Fees is RM:%.2f",totalprice);
                 Parking.remove(i);
             }
         }
@@ -76,7 +76,7 @@ public class SystemRunning extends Vehicle {
                 totaltimes=(System.currentTimeMillis()-Parking.get(i).getTimes())/1000;
                 totalprice = (totaltimes * 0.30);
                 System.out.println("\nYour Parking Times is :"+totaltimes);
-                System.out.printf("\nYour Parking Fees is :%.2f",totalprice);
+                System.out.printf("\nYour Parking Fees is RM:%.2f",totalprice);
                 Parking.remove(i);
             }
         }
