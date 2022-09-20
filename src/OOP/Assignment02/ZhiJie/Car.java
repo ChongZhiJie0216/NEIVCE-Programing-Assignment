@@ -1,4 +1,4 @@
-package OOP.Assignment02;
+package OOP.Assignment02.ZhiJie;
 
 public class Car extends Vehicle{
         public Car (String model,String color,int wheel,int ticket,int times){

@@ -1,4 +1,4 @@
-package OOP.Assignment02;
+package OOP.Assignment02.ZhiJie;
 
 public class Motorbike extends Vehicle {
     public Motorbike(String model, String color, int ticket,int wheel,long times){

@@ -1,4 +1,4 @@
-package OOP.Assignment02;
+package OOP.Assignment02.ZhiJie;
 
 public class Vehicle {
         private String model;
@@ -6,6 +6,8 @@ public class Vehicle {
         private int ticket;
         private int wheel;
         private long times;
+
+
 
         public Vehicle(String model, String color, int wheel, int ticket, long times) {
         this.model = model;
