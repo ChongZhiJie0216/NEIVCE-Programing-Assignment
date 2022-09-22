@@ -26,6 +26,7 @@ public class RUN extends System {
                 system.check();
             }else if (selection ==0){
                 system.exit();
+                break;
             }
         }
     }
