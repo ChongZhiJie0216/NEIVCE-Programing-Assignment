@@ -7,7 +7,6 @@ public class RUN extends System {
         System system = new System();
         Scanner sc = new Scanner(java.lang.System.in);
         int selection = 0;
-        int exit = 0;
         while (true) {
             system.Menu();
             java.lang.System.out.print("Please Enter Option (0-5):");
