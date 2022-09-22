@@ -2,18 +2,18 @@ package OOP.Assignment02.ZhiJie;
 
 import java.util.Scanner;
 
-public class RUN extends SystemRunning{
+public class RUN extends System {
     public static void main(String[] args) {
-        SystemRunning system = new SystemRunning();
-        Scanner sc = new Scanner(System.in);
+        System system = new System();
+        Scanner sc = new Scanner(java.lang.System.in);
         int selection = 0;
         int exit = 0;
         while (true) {
             system.Menu();
-            System.out.print("Please Enter Option (0-5):");
+            java.lang.System.out.print("Please Enter Option (0-5):");
             selection = sc.nextInt();
             if(selection >=6) {
-                System.out.print("!!! Please Enter Under 5 Selection !!!");
+                java.lang.System.out.print("!!! Please Enter Under 5 Selection !!!");
             } else if (selection == 1) {
                 system.CarEnter();
             } else if (selection == 2) {
