@@ -2,29 +2,25 @@ package OOP.Assignment02.ZhiJie;
 
 import java.util.Scanner;
 
-public class RUN extends System {
+public class RUN extends ParkingSystem {
     public static void main(String[] args) {
-        System system = new System();
+        ParkingSystem parkingSystem = new ParkingSystem();
         Scanner sc = new Scanner(java.lang.System.in);
         int selection = 0;
         while (true) {
-            system.Menu();
-            java.lang.System.out.print("Please Enter Option (0-5):");
+            parkingSystem.Menu();
+            java.lang.System.out.print("Please Enter Option (0-3):");
             selection = sc.nextInt();
-            if(selection >=6) {
-                java.lang.System.out.print("!!! Please Enter Under 5 Selection !!!");
+            if(selection >=4) {
+                java.lang.System.out.print("!!! Please Enter Under 3 Selection !!!");
             } else if (selection == 1) {
-                system.CarEnter();
+                parkingSystem.vehicleEntry();
             } else if (selection == 2) {
-                system.MotorbikeEnter();
+                parkingSystem.vehicleExit();
             } else if (selection == 3) {
-                system.CarExit();
-            } else if (selection == 4) {
-                system.MotorbikeExit();
-            } else if (selection == 5) {
-                system.check();
+               parkingSystem.vehicleStatus();
             }else if (selection ==0){
-                system.exit();
+                parkingSystem.exit();
                 break;
             }
         }
