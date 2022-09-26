@@ -66,7 +66,8 @@ public class ParkingSystem extends Vehicle {
                 totaltimes = (System.currentTimeMillis() - Parking.get(i).getTimes()) / 1000;
                 if (Parking.get(i).getWheel() == 4) {
                     totalprice = (totaltimes * 0.50);
-                } else if (Parking.get(i).getWheel() == 2) totalprice = (totaltimes * 0.25);
+                } else if (Parking.get(i).getWheel() == 2)
+                    totalprice = (totaltimes * 0.25);
                 System.out.println("\nYour Parking Times is :" + totaltimes);
                 System.out.printf("\nYour Parking Fees is RM:%.2f", totalprice);
                 Parking.remove(i);
