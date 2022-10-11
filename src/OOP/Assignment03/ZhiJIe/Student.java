@@ -141,7 +141,7 @@ public class Student extends JFrame  {
         prog.setBounds(50, 660, 190, 40);
 
         picture = new JLabel("");
-        picture.setBounds(550, 110, 200, 200);
+        picture.setBounds(550, 110, 200, 225);
 
     }
     void JTextField(){
@@ -208,25 +208,25 @@ public class Student extends JFrame  {
         female.addActionListener(new Gender(male,female));
     }
     void JButton(){
-        Receipt = new JButton("Rcp");
+        Receipt = new JButton("Generate Receipt");
         Receipt.setFont(new Font("Arial", Font.BOLD, 20));
-        Receipt.setBounds(790, 110, 80, 40);
+        Receipt.setBounds(550, 360, 200, 40);
         Receipt.addActionListener(new Recipe(names,stuid,ages,emails,phone,address,nationality,enrollment,studies,programs,this));
         Total();
 
-        Reset = new JButton("Rst");
+        Reset = new JButton("Reset");
         Reset.setFont(new Font("Arial", Font.BOLD, 20));
-        Reset.setBounds(790, 160, 80, 40);
+        Reset.setBounds(550, 410, 200, 40);
         Reset.addActionListener(new Reset(names,stuid,ages,emails,phone,address,male,female,nationality,enrollment,studies,programs,picture));
 
         Print= new JButton("Print");
         Print.setFont(new Font("Arial", Font.BOLD, 20));
-        Print.setBounds(790, 210, 80, 40);
+        Print.setBounds(550, 460, 200, 40);
         Print.addActionListener(new Print(names,stuid,ages,emails,phone,address,nationality,enrollment,studies,programs,this));
 
-        Brown = new JButton("Brw");
+        Brown = new JButton("Browns");
         Brown.setFont(new Font("Arial", Font.BOLD, 20));
-        Brown.setBounds(790, 260, 80, 40);
+        Brown.setBounds(550, 510, 200, 40);
         Brown.addActionListener(new Brw(picture));
 
     }
