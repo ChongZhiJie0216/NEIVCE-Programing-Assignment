@@ -1,4 +1,4 @@
-package OOP.Assignment03.ZhiJIe;
+package OOP.Assignment03;
 
 import javax.swing.*;
 import java.awt.*;
