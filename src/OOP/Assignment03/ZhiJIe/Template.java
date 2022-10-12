@@ -1,22 +1,10 @@
-package OOP;
+package OOP.Assignment03.ZhiJIe;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.Window.Type;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JRadioButton;
-import javax.swing.SwingConstants;
-import java.awt.Toolkit;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JRadioButtonMenuItem;
+import java.awt.event.ActionListener;
 
 public class Template {
 
@@ -35,7 +23,7 @@ public class Template {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI window = new GUI();
+					Template window = new Template();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
