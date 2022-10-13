@@ -211,7 +211,7 @@ public class Template {
 		frame.getContentPane().add(Brown);
 
 		JPanel ReceiptPanel = new JPanel();
-		ReceiptPanel.setBounds(700, 110, 550, 600);
+		ReceiptPanel.setBounds(700, 110, 550, 250);
 		frame.getContentPane().add(ReceiptPanel);
 
 	}

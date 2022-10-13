@@ -176,7 +176,7 @@ public class Student extends JFrame  {
         ReceiptPanel = new JTextArea();
         ReceiptPanel.setFont(new Font("Arial", Font.BOLD, 15));
         ReceiptPanel.setColumns(10);
-        ReceiptPanel.setBounds(700, 110, 550, 400);
+        ReceiptPanel.setBounds(700, 110, 550, 250);
         ReceiptPanel.setEditable(false);
     }
     void JComboBox(){
