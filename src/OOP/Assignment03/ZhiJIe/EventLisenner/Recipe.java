@@ -39,15 +39,18 @@ public class Recipe implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-/*
-        JOptionPane.showMessageDialog(null,((JButton)e.getSource()).getText());
-*/
-        String Gender;
-        String Info = "Names : " + names.getText() + "\nStudent ID : " + studis.getText() + "\n Age :" + ages.getSelectedItem()
-                + "\n Emails : " + emails.getText() + "\n Phone : " + phone.getText() + "\n Address : " + address.getText()
-                + "\n Gender : " + student.getGender() + "\n Nationaly : " + nationality.getText()
-                + "\n Year of Enrollment : " + enrollment.getSelectedItem() + "\n Year of Studies: " + studies.getSelectedItem()
-                + "\n Programme : " + programms.getSelectedItem() + "\n" + student.getTotal();
-        JOptionPane.showMessageDialog(null, Info);
+        Student.ReceiptPanel.setText(
+                "Names : " + names.getText()
+                + "\nStudent ID : " + studis.getText()
+                + "\n Age :" + ages.getSelectedItem()
+                + "\n Emails : " + emails.getText()
+                + "\n Phone : " + phone.getText()
+                + "\n Address : " + address.getText()
+                + "\n Gender : " + student.getGender()
+                + "\n Nationaly : " + nationality.getText()
+                + "\n Year of Enrollment : " + enrollment.getSelectedItem()
+                + "\n Year of Studies: " + studies.getSelectedItem()
+                + "\n Programme : " + programms.getSelectedItem()
+                        + "\n" + student.getTotal());
     }
 }

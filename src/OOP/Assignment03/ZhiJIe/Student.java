@@ -10,6 +10,7 @@ import java.awt.print.PrinterJob;
 
 
 public class Student extends JFrame  {
+    public static JTextArea ReceiptPanel;
     JLabel bgPhoto,title,name,id,age,email,hp,add,gnd,nat,yoe,yos,prog,picture;
     JTextField names,stuid,emails,phone,nationality;
     JTextArea address;
@@ -74,6 +75,8 @@ public class Student extends JFrame  {
         frame.getContentPane().add(Reset);
         frame.getContentPane().add(Print);
         frame.getContentPane().add(Brown);
+        /*JPanel*/
+        frame.getContentPane().add(ReceiptPanel);
     }
 
     public static void main(String[] args) {
@@ -91,14 +94,13 @@ public class Student extends JFrame  {
 
     void JLabel(){
 
-
         title = new JLabel("Student Registration System");
         title.setFont(new Font("Arial", Font.BOLD, 40));
         title.setBounds(400, 11, 550, 50);
 
         name = new JLabel("Names:");
         name.setFont(new Font("Arial", Font.BOLD, 20));
-        name.setBounds(60, 110, 90, 40);
+        name.setBounds(50, 110, 90, 40);
 
         id = new JLabel("Student ID:");
         id.setFont(new Font("Arial", Font.BOLD, 20));
@@ -141,7 +143,7 @@ public class Student extends JFrame  {
         prog.setBounds(50, 660, 190, 40);
 
         picture = new JLabel("");
-        picture.setBounds(550, 110, 200, 225);
+        picture.setBounds(430, 110, 200, 225);
 
     }
     void JTextField(){
@@ -171,6 +173,12 @@ public class Student extends JFrame  {
         address = new JTextArea();
         address.setColumns(10);
         address.setBounds(160, 360, 200, 100);
+
+        ReceiptPanel = new JTextArea();
+        ReceiptPanel.setFont(new Font("Arial", Font.BOLD, 15));
+        ReceiptPanel.setColumns(10);
+        ReceiptPanel.setBounds(700, 110, 550, 600);
+        ReceiptPanel.setEditable(false);
     }
     void JComboBox(){
         ages = new JComboBox();
@@ -210,23 +218,23 @@ public class Student extends JFrame  {
     void JButton(){
         Receipt = new JButton("Generate Receipt");
         Receipt.setFont(new Font("Arial", Font.BOLD, 20));
-        Receipt.setBounds(550, 360, 200, 40);
+        Receipt.setBounds(430, 360, 200, 40);
         Receipt.addActionListener(new Recipe(names,stuid,ages,emails,phone,address,nationality,enrollment,studies,programs,this));
         Total();
 
         Reset = new JButton("Reset");
         Reset.setFont(new Font("Arial", Font.BOLD, 20));
-        Reset.setBounds(550, 410, 200, 40);
+        Reset.setBounds(430, 410, 200, 40);
         Reset.addActionListener(new Reset(names,stuid,ages,emails,phone,address,male,female,nationality,enrollment,studies,programs,picture));
 
         Print= new JButton("Print");
         Print.setFont(new Font("Arial", Font.BOLD, 20));
-        Print.setBounds(550, 460, 200, 40);
+        Print.setBounds(430, 460, 200, 40);
         Print.addActionListener(new Print(names,stuid,ages,emails,phone,address,nationality,enrollment,studies,programs,this));
 
         Brown = new JButton("Browns");
         Brown.setFont(new Font("Arial", Font.BOLD, 20));
-        Brown.setBounds(550, 510, 200, 40);
+        Brown.setBounds(430, 510, 200, 40);
         Brown.addActionListener(new Brw(picture));
 
     }
