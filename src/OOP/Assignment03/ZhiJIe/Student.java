@@ -29,7 +29,7 @@ public class Student extends JFrame  {
     JFrame frame = new JFrame();
 
     Student() {
-        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\01-Workspace\\Java\\NEIVCE-Programing-Assignment\\src\\OOP\\Assignment03\\ZhiJIe\\KEKW.png"));
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("src/OOP/Assignment03/ZhiJIe/KEKW.jpg"));
         frame.setTitle("2022 Student Registration System");
         frame.setFont(new Font("Arial", Font.BOLD, 18));
         frame.setType(Type.NORMAL);
