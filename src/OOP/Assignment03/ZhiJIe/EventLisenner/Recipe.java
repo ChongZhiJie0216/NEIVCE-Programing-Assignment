@@ -50,7 +50,6 @@ public class Recipe implements ActionListener {
                 + "\n Nationaly : " + nationality.getText()
                 + "\n Year of Enrollment : " + enrollment.getSelectedItem()
                 + "\n Year of Studies: " + studies.getSelectedItem()
-                + "\n Programme : " + programms.getSelectedItem()
-                        + "\n" + student.getTotal());
+                + "\n Programme : " + programms.getSelectedItem() + "\n" + student.getTotal());
     }
 }

@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.awt.print.PrinterJob;
 
 public class Print implements ActionListener {
+    private Student checkGroup;
+
     private final Student student;
     private JTextField names;
     private JTextField studis;
@@ -21,8 +23,8 @@ public class Print implements ActionListener {
     private JComboBox programms;
 
     public Print(JTextField names, JTextField studis, JComboBox ages, JTextField emails, JTextField phone,
-                  JTextArea address, JTextField nationality, JComboBox enrollment, JComboBox studies,
-                  JComboBox programms, Student student) {
+                 JTextArea address, JTextField nationality, JComboBox enrollment, JComboBox studies,
+                 JComboBox programms, Student student) {
         this.names = names;
         this.studis = studis;
         this.ages = ages;

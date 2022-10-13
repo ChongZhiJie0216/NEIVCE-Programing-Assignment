@@ -10,6 +10,7 @@ import java.awt.print.PrinterJob;
 
 
 public class Student extends JFrame  {
+
     public static JTextArea ReceiptPanel;
     JLabel bgPhoto,title,name,id,age,email,hp,add,gnd,nat,yoe,yos,prog,picture;
     JTextField names,stuid,emails,phone,nationality;
@@ -225,7 +226,7 @@ public class Student extends JFrame  {
         Reset = new JButton("Reset");
         Reset.setFont(new Font("Arial", Font.BOLD, 20));
         Reset.setBounds(430, 410, 200, 40);
-        Reset.addActionListener(new Reset(names,stuid,ages,emails,phone,address,male,female,nationality,enrollment,studies,programs,picture));
+        Reset.addActionListener(new Reset(names,stuid,ages,emails,phone,address,male,female,nationality,enrollment,studies,programs,picture,ReceiptPanel));
 
         Print= new JButton("Print");
         Print.setFont(new Font("Arial", Font.BOLD, 20));

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Reset implements ActionListener {
+    private JTextArea ReceiptPanel;
     private JLabel picture;
     private JTextField names;
     private JTextField studis;
@@ -19,7 +20,7 @@ public class Reset implements ActionListener {
     private JComboBox studies;
     private JComboBox programms;
 
-    public Reset(JTextField names, JTextField studis,JComboBox ages,JTextField emails,JTextField phone,JTextArea address,JRadioButton male,JRadioButton female,JTextField nationality,JComboBox enrollment,JComboBox studies,JComboBox programms,JLabel Picture) {
+    public Reset(JTextField names, JTextField studis,JComboBox ages,JTextField emails,JTextField phone,JTextArea address,JRadioButton male,JRadioButton female,JTextField nationality,JComboBox enrollment,JComboBox studies,JComboBox programms,JLabel Picture,JTextArea ReceiptPanel) {
             this.names = names;
             this.studis = studis;
             this.ages = ages;
@@ -33,6 +34,7 @@ public class Reset implements ActionListener {
             this.studies = studies;
             this.programms = programms;
             this.picture = Picture;
+            this.ReceiptPanel = ReceiptPanel;
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -49,7 +51,7 @@ public class Reset implements ActionListener {
         studies.setSelectedIndex(0);
         programms.setSelectedIndex(0);
         picture.setIcon(null);
-
+        ReceiptPanel.setText("");
         JOptionPane.showMessageDialog(null,"Reset Done");
     }
 }
