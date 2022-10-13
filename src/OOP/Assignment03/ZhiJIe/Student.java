@@ -25,14 +25,14 @@ public class Student extends JFrame  {
 
     JFrame frame = new JFrame();
 
-    Student(){
+    Student() {
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\01-Workspace\\Java\\NEIVCE-Programing-Assignment\\src\\OOP\\Assignment03\\ZhiJIe\\KEKW.png"));
         frame.setTitle("2022 Student Registration System");
         frame.setFont(new Font("Arial", Font.BOLD, 18));
         frame.setType(Type.NORMAL);
         frame.setBounds(100, 100, 450, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1366,768);
+        frame.setSize(1366, 768);
         frame.getContentPane().setLayout(null);
 
         JLabel();
@@ -61,8 +61,11 @@ public class Student extends JFrame  {
         frame.getContentPane().add(stuid);
         frame.getContentPane().add(emails);
         frame.getContentPane().add(phone);
-        frame.getContentPane().add(address);
+
         frame.getContentPane().add(nationality);
+        /*JTextArea*/
+        frame.getContentPane().add(address);
+        frame.getContentPane().add(ReceiptPanel);
         /*JComboBox*/
         frame.getContentPane().add(ages);
         frame.getContentPane().add(enrollment);
@@ -76,8 +79,6 @@ public class Student extends JFrame  {
         frame.getContentPane().add(Reset);
         frame.getContentPane().add(Print);
         frame.getContentPane().add(Brown);
-        /*JPanel*/
-        frame.getContentPane().add(ReceiptPanel);
     }
 
     public static void main(String[] args) {
@@ -143,7 +144,7 @@ public class Student extends JFrame  {
         prog.setFont(new Font("Arial", Font.BOLD, 20));
         prog.setBounds(50, 660, 190, 40);
 
-        picture = new JLabel("");
+        picture = new JLabel(new ImageIcon("src/OOP/Assignment03/ZhiJIe/KEKW.jpg"));
         picture.setBounds(430, 110, 200, 225);
 
     }
