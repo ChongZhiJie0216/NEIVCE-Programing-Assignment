@@ -41,15 +41,15 @@ public class Recipe implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Student.ReceiptPanel.setText(
                 "Names : " + names.getText()
-                + "\nStudent ID : " + studis.getText()
-                + "\n Age :" + ages.getSelectedItem()
-                + "\n Emails : " + emails.getText()
-                + "\n Phone : " + phone.getText()
-                + "\n Address : " + address.getText()
-                + "\n Gender : " + student.getGender()
-                + "\n Nationaly : " + nationality.getText()
-                + "\n Year of Enrollment : " + enrollment.getSelectedItem()
-                + "\n Year of Studies: " + studies.getSelectedItem()
-                + "\n Programme : " + programms.getSelectedItem() + "\n" + student.getTotal());
+                        + "\nStudent ID : " + studis.getText()
+                        + "\nAge :" + ages.getSelectedItem()
+                        + "\nEmails : " + emails.getText()
+                        + "\nPhone : " + phone.getText()
+                        + "\nAddress : " + address.getText()
+                        + "\nGender : " + student.getGender()
+                        + "\nNationally : " + nationality.getText()
+                        + "\nYear of Enrollment : " + enrollment.getSelectedItem()
+                        + "\nYear of Studies: " + studies.getSelectedItem()
+                        + "\nProgramme : " + programms.getSelectedItem() + "\n" + student.getTotal());
     }
 }

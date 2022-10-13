@@ -50,7 +50,7 @@ public class Reset implements ActionListener {
         enrollment.setSelectedIndex(0);
         studies.setSelectedIndex(0);
         programms.setSelectedIndex(0);
-        picture.setIcon(null);
+        picture.setIcon(new ImageIcon("src/OOP/Assignment03/ZhiJIe/profile-icon-9.png"));
         ReceiptPanel.setText("");
         JOptionPane.showMessageDialog(null,"Reset Done");
     }

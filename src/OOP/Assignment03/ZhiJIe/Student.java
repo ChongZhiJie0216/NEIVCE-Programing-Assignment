@@ -12,28 +12,30 @@ import java.awt.print.PrinterJob;
 public class Student extends JFrame  {
 
     public static JTextArea ReceiptPanel;
-    JLabel bgPhoto,title,name,id,age,email,hp,add,gnd,nat,yoe,yos,prog,picture;
+    public static String total;
+    JLabel title,name,id,age,email,hp,add,gnd,nat,yoe,yos,prog,picture;
     JTextField names,stuid,emails,phone,nationality;
     JTextArea address;
-    JComboBox ages,enrollment,studies,programs;
+    JComboBox ages;
+    JComboBox enrollment;
+    JComboBox studies;
+    public static JComboBox programs;
     JRadioButton male,female;
     JButton Receipt,Reset,Print,Brown;
-    String total;
     FileNameExtensionFilter filter;
     PrinterJob pj;
     PageFormat pf;
 
     JFrame frame = new JFrame();
 
-    Student(){
+    Student() {
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\01-Workspace\\Java\\NEIVCE-Programing-Assignment\\src\\OOP\\Assignment03\\ZhiJIe\\KEKW.png"));
         frame.setTitle("2022 Student Registration System");
         frame.setFont(new Font("Arial", Font.BOLD, 18));
         frame.setType(Type.NORMAL);
         frame.setBounds(100, 100, 450, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1366,768);
-        frame.getContentPane().setLayout(null);
+        frame.setSize(1366, 768);
 
         JLabel();
         JTextField();
@@ -41,56 +43,52 @@ public class Student extends JFrame  {
         JComboBox();
         JRadioButton();
         JButton();
+        /*Background*/
+        ImageIcon icon = new ImageIcon("src/OOP/Assignment03/ZhiJIe/registration.jpg");
+        Image img = icon.getImage();
+        Image newimg = img.getScaledInstance(1366, 768, img.SCALE_SMOOTH);
+        icon = new ImageIcon(newimg);
+        JLabel bg = new JLabel(icon);
 
         /*JLabel*/
-        frame.getContentPane().add(title);
-        frame.getContentPane().add(name);
-        frame.getContentPane().add(id);
-        frame.getContentPane().add(age);
-        frame.getContentPane().add(email);
-        frame.getContentPane().add(hp);
-        frame.getContentPane().add(add);
-        frame.getContentPane().add(gnd);
-        frame.getContentPane().add(nat);
-        frame.getContentPane().add(yoe);
-        frame.getContentPane().add(yos);
-        frame.getContentPane().add(prog);
-        frame.getContentPane().add(picture);
+        bg.add(title);
+        bg.add(name);
+        bg.add(id);
+        bg.add(age);
+        bg.add(email);
+        bg.add(hp);
+        bg.add(add);
+        bg.add(gnd);
+        bg.add(nat);
+        bg.add(yoe);
+        bg.add(yos);
+        bg.add(prog);
+        bg.add(picture);
         /*JTextField*/
-        frame.getContentPane().add(names);
-        frame.getContentPane().add(stuid);
-        frame.getContentPane().add(emails);
-        frame.getContentPane().add(phone);
-        frame.getContentPane().add(address);
-        frame.getContentPane().add(nationality);
-        /*JComboBox*/
-        frame.getContentPane().add(ages);
-        frame.getContentPane().add(enrollment);
-        frame.getContentPane().add(studies);
-        frame.getContentPane().add(programs);
-        /*JRadioButton*/
-        frame.getContentPane().add(male);
-        frame.getContentPane().add(female);
-        /*JButton*/
-        frame.getContentPane().add(Receipt);
-        frame.getContentPane().add(Reset);
-        frame.getContentPane().add(Print);
-        frame.getContentPane().add(Brown);
-        /*JPanel*/
-        frame.getContentPane().add(ReceiptPanel);
-    }
+        bg.add(names);
+        bg.add(stuid);
+        bg.add(emails);
+        bg.add(phone);
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    Student window = new Student();
-                    window.frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+        bg.add(nationality);
+        /*JTextArea*/
+        bg.add(address);
+        bg.add(ReceiptPanel);
+        /*JComboBox*/
+        bg.add(ages);
+        bg.add(enrollment);
+        bg.add(studies);
+        bg.add(programs);
+        /*JRadioButton*/
+        bg.add(male);
+        bg.add(female);
+        /*JButton*/
+        bg.add(Receipt);
+        bg.add(Reset);
+        bg.add(Print);
+        bg.add(Brown);
+
+        frame.add(bg);
     }
 
     void JLabel(){
@@ -143,7 +141,7 @@ public class Student extends JFrame  {
         prog.setFont(new Font("Arial", Font.BOLD, 20));
         prog.setBounds(50, 660, 190, 40);
 
-        picture = new JLabel("");
+        picture = new JLabel(new ImageIcon("src/OOP/Assignment03/ZhiJIe/profile-icon-9.png"));
         picture.setBounds(430, 110, 200, 225);
 
     }
@@ -178,7 +176,7 @@ public class Student extends JFrame  {
         ReceiptPanel = new JTextArea();
         ReceiptPanel.setFont(new Font("Arial", Font.BOLD, 15));
         ReceiptPanel.setColumns(10);
-        ReceiptPanel.setBounds(700, 110, 550, 600);
+        ReceiptPanel.setBounds(700, 110, 550, 400);
         ReceiptPanel.setEditable(false);
     }
     void JComboBox(){
@@ -239,7 +237,6 @@ public class Student extends JFrame  {
         Brown.addActionListener(new Brw(picture));
 
     }
-
     void Total() {
         if(studies.getSelectedItem().equals("1")&&programs.getSelectedItem().equals("SEAIR")) {
             total=("Enrolled Education Program is Artificial Intelligence and Industrial Robotics"+"\nTotal Fees Payment for 1 Year is RM 20,000");
@@ -287,6 +284,7 @@ public class Student extends JFrame  {
             total=("Enrolled Education Program is Internet of Things"+"\nTotal Fees Payment for 3 Years is RM 45,000");
         }
     }
+
     public String getTotal() {
         return total;
     }
@@ -298,7 +296,16 @@ public class Student extends JFrame  {
         if (female.isSelected()) return "Female";
         return "Not selected" ;
     }
-    void Brown(){
-
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    Student window = new Student();
+                    window.frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }
