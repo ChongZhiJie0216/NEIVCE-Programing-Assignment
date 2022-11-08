@@ -1,7 +1,5 @@
 package OOP.Assignment02.ZhiJie;
 
-import jdk.internal.access.JavaIOFileDescriptorAccess;
-
 public class Car extends Vehicle{
 
         public Car (String model,String color,int wheel,int ticket,int times){

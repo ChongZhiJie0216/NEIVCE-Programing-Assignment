@@ -51,5 +51,7 @@ public class Recipe implements ActionListener {
                         + "\nYear of Enrollment : " + enrollment.getSelectedItem()
                         + "\nYear of Studies: " + studies.getSelectedItem()
                         + "\nProgramme : " + programms.getSelectedItem() + "\n" + student.getTotal());
+        JOptionPane.showMessageDialog(null,"Data Saved Successfully");
+
     }
 }
